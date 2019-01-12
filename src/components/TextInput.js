@@ -534,7 +534,7 @@ class TextInput extends React.Component<Props, State> {
                   ? colors.error
                   : this.state.focused
                     ? activeColor
-                    : outlineColor,
+                    : this.props.outlineColor || '#e4e4e4',
               },
             ]}
           />
