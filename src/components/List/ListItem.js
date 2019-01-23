@@ -69,6 +69,7 @@ class ListItem extends React.Component<Props> {
       left,
       right,
       title,
+      titlePaddingBottom,
       description,
       onPress,
       theme,
@@ -94,14 +95,14 @@ class ListItem extends React.Component<Props> {
           {left ? left({ color: descriptionColor }) : null}
           <View style={[styles.item, styles.content]} pointerEvents="none">
             <Text
-              numberOfLines={1}
-              style={[styles.title, { color: titleColor }]}
+              numberOfLines={2}
+              style={[styles.title, { paddingBottom: titlePaddingBottom, color: titleColor }]}
             >
               {title}
             </Text>
             {description ? (
               <Text
-                numberOfLines={2}
+                numberOfLines={4}
                 style={[
                   styles.description,
                   {
