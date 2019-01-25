@@ -69,6 +69,7 @@ class ListItem extends React.Component<Props> {
       left,
       right,
       title,
+      titleColor,
       titlePaddingBottom,
       description,
       onPress,
@@ -76,7 +77,7 @@ class ListItem extends React.Component<Props> {
       style,
       ...rest
     } = this.props;
-    const titleColor = color(theme.colors.text)
+    const titleThemeColor = titleColor || color(theme.colors.text)
       .alpha(0.87)
       .rgb()
       .string();
@@ -96,7 +97,7 @@ class ListItem extends React.Component<Props> {
           <View style={[styles.item, styles.content]} pointerEvents="none">
             <Text
               numberOfLines={2}
-              style={[styles.title, { paddingBottom: titlePaddingBottom, color: titleColor }]}
+              style={[styles.title, { paddingBottom: titlePaddingBottom, color: titleThemeColor }]}
             >
               {title}
             </Text>
