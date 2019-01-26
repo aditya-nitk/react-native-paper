@@ -75,7 +75,7 @@ type Props = {
   /**
    * Icon to display for the `Button`.
    */
-  trailingIcon?: IconSource,
+  trailingText?: IconSource,
   /**
    * Function to execute on press in on the trailingIcon.
    */
@@ -84,6 +84,18 @@ type Props = {
    * Function to execute on press out on the trailingIcon.
    */
   trailingIconOnPressOut?: () => Function,
+  /**
+   * Text to display for the `Button`.
+   */
+  trailingText?: String,
+  /**
+   * Function to execute on press in on the trailingIcon.
+   */
+  trailingTextOnPressIn?: () => Function,
+  /**
+   * Function to execute on press out on the trailingIcon.
+   */
+  trailingTextOnPressOut?: () => Function,
   /**
    * Placeholder for the input.
    */
@@ -406,6 +418,9 @@ class TextInput extends React.Component<Props, State> {
       trailingIcon,
       trailingIconOnPressIn,
       trailingIconOnPressOut,
+      trailingText,
+      trailingTextOnPressIn,
+      trailingTextOnPressOut,
       style,
       theme,
       render,
@@ -732,6 +747,30 @@ class TextInput extends React.Component<Props, State> {
               />
             </TouchableOpacity>
           ) : null}
+          {trailingText ? (
+            <TouchableOpacity
+              style={[
+                styles.trailingText,
+                { top: iconYOffset, marginLeft: 0, marginRight: 12 },
+              ]}
+              onPressIn={trailingTextOnPressIn}
+              onPressOut={trailingTextOnPressOut}
+            >
+              <Text
+                source={trailingIcon}
+                size={24}
+                style={{
+                  color: error
+                    ? colors.error
+                    : this.state.focused
+                      ? activeColor
+                      : placeholderColor
+                }}
+              >
+                {trailingText}
+              </Text>
+            </TouchableOpacity>
+          ) : null}
         </View>
       </View>
     );
@@ -803,6 +842,10 @@ const styles = StyleSheet.create({
   icon: {
     width: 24,
     height: 24,
+    marginLeft: 12,
+    alignSelf: 'center',
+  },
+  trailingText: {
     marginLeft: 12,
     alignSelf: 'center',
   },
