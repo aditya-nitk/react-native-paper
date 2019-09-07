@@ -2,6 +2,7 @@
 
 exports[`renders extended FAB 1`] = `
 <View
+  pointerEvents="auto"
   style={
     Object {
       "backgroundColor": "#03dac4",
@@ -22,11 +23,11 @@ exports[`renders extended FAB 1`] = `
       ],
     }
   }
-  visible={true}
 >
   <View
     accessibilityLabel="Add items"
     accessibilityRole="button"
+    accessibilityStates={Array []}
     accessible={true}
     isTVSelectable={true}
     onResponderGrant={[Function]}
@@ -36,9 +37,14 @@ exports[`renders extended FAB 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "borderRadius": 28,
-      }
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 28,
+        },
+      ]
     }
   >
     <View
@@ -112,7 +118,7 @@ exports[`renders extended FAB 1`] = `
                   },
                 ],
                 Object {
-                  "fontFamily": "Material Icons",
+                  "fontFamily": "Material Design Icons",
                   "fontStyle": "normal",
                   "fontWeight": "normal",
                 },
@@ -120,7 +126,7 @@ exports[`renders extended FAB 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
       </View>
@@ -129,7 +135,8 @@ exports[`renders extended FAB 1`] = `
           Array [
             Object {
               "color": "#000000",
-              "fontFamily": "Helvetica Neue",
+              "fontFamily": "System",
+              "fontWeight": "400",
               "textAlign": "left",
               "writingDirection": "ltr",
             },
@@ -139,7 +146,8 @@ exports[`renders extended FAB 1`] = `
               },
               Object {
                 "color": "rgba(0, 0, 0, .54)",
-                "fontFamily": "HelveticaNeue-Medium",
+                "fontFamily": "System",
+                "fontWeight": "500",
               },
             ],
           ]
@@ -154,6 +162,7 @@ exports[`renders extended FAB 1`] = `
 
 exports[`renders normal FAB 1`] = `
 <View
+  pointerEvents="auto"
   style={
     Object {
       "backgroundColor": "#03dac4",
@@ -174,10 +183,10 @@ exports[`renders normal FAB 1`] = `
       ],
     }
   }
-  visible={true}
 >
   <View
     accessibilityRole="button"
+    accessibilityStates={Array []}
     accessible={true}
     isTVSelectable={true}
     onResponderGrant={[Function]}
@@ -187,9 +196,14 @@ exports[`renders normal FAB 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "borderRadius": 28,
-      }
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 28,
+        },
+      ]
     }
   >
     <View
@@ -263,7 +277,7 @@ exports[`renders normal FAB 1`] = `
                   },
                 ],
                 Object {
-                  "fontFamily": "Material Icons",
+                  "fontFamily": "Material Design Icons",
                   "fontStyle": "normal",
                   "fontWeight": "normal",
                 },
@@ -271,7 +285,7 @@ exports[`renders normal FAB 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
       </View>
@@ -282,6 +296,7 @@ exports[`renders normal FAB 1`] = `
 
 exports[`renders small FAB 1`] = `
 <View
+  pointerEvents="auto"
   style={
     Object {
       "backgroundColor": "#03dac4",
@@ -302,10 +317,10 @@ exports[`renders small FAB 1`] = `
       ],
     }
   }
-  visible={true}
 >
   <View
     accessibilityRole="button"
+    accessibilityStates={Array []}
     accessible={true}
     isTVSelectable={true}
     onResponderGrant={[Function]}
@@ -315,9 +330,14 @@ exports[`renders small FAB 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "borderRadius": 28,
-      }
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 28,
+        },
+      ]
     }
   >
     <View
@@ -391,7 +411,7 @@ exports[`renders small FAB 1`] = `
                   },
                 ],
                 Object {
-                  "fontFamily": "Material Icons",
+                  "fontFamily": "Material Design Icons",
                   "fontStyle": "normal",
                   "fontWeight": "normal",
                 },
@@ -399,7 +419,7 @@ exports[`renders small FAB 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
       </View>
