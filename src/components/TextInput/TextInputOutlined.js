@@ -395,7 +395,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 24,
     height: 24,
-    marginLeft: 8,
+    marginLeft: 12,
     alignSelf: 'center',
   }
 });
