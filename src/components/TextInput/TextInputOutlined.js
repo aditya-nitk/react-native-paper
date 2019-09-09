@@ -317,22 +317,16 @@ class TextInputOutlined extends React.Component<ChildTextInputProps, {}> {
             </TouchableOpacity>
           ) : null}
           {trailingText ? (
-            <TouchableOpacity
-              style={[
-                styles.trailingText,
-                { top: iconYOffset, marginLeft: 0, marginRight: 12 },
-              ]}
-            >
+            <TouchableOpacity style={styles.trailingText}>
               <Text
-                source={trailingIcon}
-                size={24}
-                style={
-                  error
-                    ? colors.error
-                    : parentState.focused
-                    ? activeColor
-                    : placeholderColor
-                }
+                style={{
+                  color:
+                    error
+                      ? colors.error
+                      : parentState.focused
+                      ? activeColor
+                      : placeholderColor
+                }}
               >
                 {trailingText}
               </Text>
@@ -397,5 +391,10 @@ const styles = StyleSheet.create({
     height: 24,
     marginLeft: 12,
     alignSelf: 'center',
+  },
+  trailingText: {
+    top: 24,
+    marginLeft: 0,
+    marginRight: 12
   }
 });
